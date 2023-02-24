@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="brandname">
+                Twitter Analysis App with Flask
+            </div>
+            <h2>Fake or Not</h2>
+        </div>
+    </header>
+    <p style="color:blue;font-size:20;text-align: center:"><b>Results For Tweet</b></p>
+    <div class="results">
+
+    {% if prediction == 1%}
+        <h2 style="color:red;">Fake</h2>
+    {% elif prediction == 0%}
+        <h2 style="color:blue;">True</h2>
+    {% endif %}
+
+    </div>
+
+    <a href="..">
+        <input type="submit" value="Go Back..">
+    </a>
+
+</body>
+</html>
+
+
+</body>
+</html>
