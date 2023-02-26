@@ -74,6 +74,7 @@ x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.25)
 vectorization = TfidfVectorizer()
 xv_train = vectorization.fit_transform(x_train)
 xv_test = vectorization.transform(x_test)
+print(xv_test)
 
 #1. Logistic Regression - used because this model is best suited for binary classification
 LR_model = LogisticRegression()
@@ -115,6 +116,9 @@ score = accuracy_score(y_test,rfc_y_pred)
 print('Accuracy of RFC model is ', score)
 
 model = svm_model.fit(xv_train,y_train)
+print(model)
+print(xv_test)
 pickle.dump(model, open("model.pkl","wb"))
+pickle.dump(vectorization, open("vector.pkl","wb"))
 
 
