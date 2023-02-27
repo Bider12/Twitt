@@ -13,15 +13,17 @@
                 Twitter Analysis App with Flask
             </div>
             <h2>Fake or Not</h2>
-        </div>
+            <div class='image'>
+            <img src="{{ url_for('static', filename = 'img/tweet.jpg') }}">
+            </div>
     </header>
     <p style="color:blue;font-size:20;text-align: center:"><b>Results For Tweet</b></p>
     <div class="results">
 
     {% if predict == 1%}
-        <h2 style="color:red;">Fake</h2>
+        <h2 style="color:blue;">Not a Fake</h2>
     {% else %}
-        <h2 style="color:blue;">True</h2>
+        <h2 style="color:red;">Fake</h2>
     {% endif %}
 
     </div>
